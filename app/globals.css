@@ -3,25 +3,25 @@
 @tailwind utilities;
 
 :root {
-  --background: #323744;  /* Exemple de couleur de fond */
-  --foreground: 213 18% 71%  ;  /* Exemple de couleur du texte */
-  --muted: #2C3546;      
-  --muted-foreground: #7A7D89;     
-  --popover: #2A2F3A;     
-  --popover-foreground:#A5AFC2;      
-  --card: #242B3F;      
-  --card-foreground: #8E9BBA;      
-  --border: #0C0F19;      
-  --input: #0A0C14;     
-  --primary: #A5AFC2;      
-  --primary-foreground: #3A3C47;     
-  --secondary: #3F4A6B;      
-  --secondary-foreground: #A6B6C8;      
-  --accent:#17181a;      
-  --accent-foreground: #BCC5D1;      
-  --destructive: #FF5C6B;      
-  --destructive-foreground: #FFFFFF;     
-  --ring: #A5AFC2;    
+  --background: 214 44% 2%;
+  --foreground: 214 38% 99%;
+  --muted: 334 33% 10%;
+  --muted-foreground: 334 4% 60%;
+  --popover: 214 44% 3%;
+  --popover-foreground: 0 0% 100%;
+  --card: 214 44% 3%;
+  --card-foreground: 0 0% 100%;
+  --border: 214 14% 10%;
+  --input: 214 14% 10%;
+  --primary: 214 85% 32%;
+  --primary-foreground: 214 85% 92%;
+  --secondary: 334 85% 32%;
+  --secondary-foreground: 334 85% 92%;
+  --accent: 0 0% 30%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 10 94% 60%;
+  --destructive-foreground: 0 0% 0%;
+  --ring: 214 85% 32%;
   --radius: 0.5rem;
 }
 
@@ -29,15 +29,41 @@ body {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
 }
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+
+@layer components {
+  .border {
+    border-width: 1px;
+    border-style: solid;
+    border-color: hsl(var(--border));
+  }
+
+  .bg-card {
+    background-color: hsl(var(--card));
+  }
+
+  .text-card-foreground {
+    color: hsl(var(--card-foreground));
+  }
+
+  .shadow {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-} */
+@layer base {
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+  }
+}
+
+
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

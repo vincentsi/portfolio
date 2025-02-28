@@ -1,25 +1,15 @@
-import { ComponentProps, ComponentPropsWithoutRef } from "react";
-import { Section } from "./section";
-import classNames from "classnames";
-import clsx from "clsx";
-import { LinkedinIcon } from "./icons/LinkedinIcon";
 
-const Code = ({ className, ...props }: ComponentPropsWithoutRef<"span">) => {
-  return (
-    <span
-      className={clsx(
-        "bg-accent/30 font-mono border border-accent p-1 text-primary rounded-sm ",
-        className
-      )}
-      {...props}
-    ></span>
-  );
-};
+import { Section } from "./section";
+// import classNames from "classnames";
+
+import { LinkedinIcon } from "./icons/LinkedinIcon";
+import { Code } from "./code";
+
 
 export const Hero = () => {
   return (
-    <Section classname="flex max-md:flex-col items-start">
-      <div className="flex-[2]">
+    <Section className="flex max-md:flex-col items-start">
+      <div className="flex-[2] flex flex-col gap-2">
         <h2 className="font-caption font-bold text-5xl text-primary">
           Vincent Simonpieri{" "}
         </h2>
@@ -41,7 +31,7 @@ export const Hero = () => {
       </div>
       <div className="flex-1">
         <img
-          src="https://media.licdn.com/dms/image/v2/D4E35AQF20okmFQPYiQ/profile-framedphoto-shrink_800_800/profile-framedphoto-shrink_800_800/0/1654921462945?e=1736985600&v=beta&t=Po-jJY2uJDdYFIOCoDTviUyx6vxDwCP62EB73dllcQw"
+          src="https://media.licdn.com/dms/image/v2/D4E35AQF20okmFQPYiQ/profile-framedphoto-shrink_800_800/profile-framedphoto-shrink_800_800/0/1654921462945?e=1741320000&v=beta&t=MxUBs20g10bYfBzVNDL4jdtNlUh2HMUyH_2pdLkr50Q"
           className="w-gull h-auto max-w-xs"
           alt="vincent picture"
         />

@@ -1,9 +1,10 @@
-import { PropsWithChildren } from "react"
-import clsx from "clsx";
+import { ReactNode } from "react";
 
-export const Section = (props:PropsWithChildren<{classname?:string}>)=>{
-return(
-    <section className={clsx("max-w-3xl px-4 m-auto",props.classname)}>
-        {props.children}
-    </section>
-)}
+interface SectionProps {
+  className?: string;
+  children: ReactNode;
+}
+
+export const Section = ({ className = "", children }: SectionProps) => {
+  return <section className={`p-4 ${className}`}>{children}</section>;
+};
