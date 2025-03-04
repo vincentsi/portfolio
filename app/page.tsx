@@ -16,7 +16,7 @@ export default function Home() {
       <Hero/>
       {/* <Spacing size="sm"/>
       <Status/> */}
-      <Spacing size="sm"/>
+      {/* <Spacing size="sm"/> */}
       <Skills/>
       <Spacing size="sm"/>
       <Projects />

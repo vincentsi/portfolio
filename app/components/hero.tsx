@@ -16,7 +16,8 @@ export const Hero = () => {
           </h2>
           <h3 className="text-3xl font-caption">Développeur Full Stack</h3>
           <p className="text-base">
-            Je suis passionné par l&apos;informatique et le développement web. Retrouvez-moi sur{" "}
+            Passionné par l&apos;informatique et le développement web, je me suis formé en autonomie et à travers un parcours complet : un BTS Système Numérique option Informatique 
+            et Réseaux, suivi d&apos;un titre professionnel (niveau 5) de Concepteur Développeur d&apos;Applications. Mon apprentissage se poursuit en continu, notamment via des plateformes comme Dyma et Udemy. Retrouvez-moi sur{" "}
             <a href="https://www.linkedin.com/in/vincent-simonpieri-alternance-/" target="_blank" rel="noopener noreferrer">
               <Code className="inline-flex items-center gap-1 hover:text-primary transition-colors">
                 <LinkedinIcon size={16} className="inline" />
@@ -24,18 +25,17 @@ export const Hero = () => {
               </Code>
             </a>
             . Basé en{" "}
-           
-              <Code className="inline-flex items-center gap-1 hover:text-primary transition-colors">
-                <Image
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/110px-Flag_of_France.svg.png"
-                  alt="france image drapeau"
-                  width={16}
-                  height={12}
-                  className="inline"
-                />
-                France
-              </Code>
-           
+            <Code className="inline-flex items-center gap-1 hover:text-primary transition-colors">
+              <Image
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/110px-Flag_of_France.svg.png"
+                alt="Drapeau français"
+                width={16}
+                height={12}
+                className="inline"
+              />
+              France
+            </Code>
+            .
           </p>
         </div>
         <div className="flex justify-start w-full max-w-xs">

@@ -93,58 +93,53 @@ export const Snake = () => {
     });
   };
 
-  const updateGame = () => {
-    const { snake, direction, food } = gameState.current;
-    const head = { ...snake[0] };
-
-    // Mettre à jour la position de la tête
-    switch (direction) {
-      case 'UP':
-        head.y -= 1;
-        break;
-      case 'DOWN':
-        head.y += 1;
-        break;
-      case 'LEFT':
-        head.x -= 1;
-        break;
-      case 'RIGHT':
-        head.x += 1;
-        break;
-    }
-
-    // Vérifier les collisions avec les murs
-    if (head.x < 0 || head.x >= 30 || head.y < 0 || head.y >= 30) {
-      setGameOver(true);
-      return;
-    }
-
-    // Vérifier les collisions avec le corps
-    if (snake.some(segment => segment.x === head.x && segment.y === head.y)) {
-      setGameOver(true);
-      return;
-    }
-
-    // Ajouter la nouvelle tête
-    const newSnake = [head, ...snake];
-
-    // Vérifier si on mange la nourriture
-    if (head.x === food.x && head.y === food.y) {
-      setScore(prev => prev + 10);
-      gameState.current.food = generateFood();
-    } else {
-      newSnake.pop();
-    }
-
-    gameState.current.snake = newSnake;
-  };
-
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
+
+    const updateGame = () => {
+      const { snake, direction, food } = gameState.current;
+      const head = { ...snake[0] };
+  
+      switch (direction) {
+        case 'UP':
+          head.y -= 1;
+          break;
+        case 'DOWN':
+          head.y += 1;
+          break;
+        case 'LEFT':
+          head.x -= 1;
+          break;
+        case 'RIGHT':
+          head.x += 1;
+          break;
+      }
+  
+      if (head.x < 0 || head.x >= 30 || head.y < 0 || head.y >= 30) {
+        setGameOver(true);
+        return;
+      }
+  
+      if (snake.some(segment => segment.x === head.x && segment.y === head.y)) {
+        setGameOver(true);
+        return;
+      }
+  
+      const newSnake = [head, ...snake];
+  
+      if (head.x === food.x && head.y === food.y) {
+        setScore(prev => prev + 10);
+        gameState.current.food = generateFood();
+      } else {
+        newSnake.pop();
+      }
+  
+      gameState.current.snake = newSnake;
+    };
 
     let animationFrameId: number;
     let lastUpdate = 0;
