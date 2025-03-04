@@ -4,27 +4,28 @@ import { Badge } from "@/components/ui/badge";
 
 const PROJECTS: ProjectProps[] = [
   {
+    title: "Site de Tournois",
+    description: "Application web complète pour la gestion de tournois. Fonctionnalités : création de tournois, inscription des équipes, suivi des matchs en temps réel, tableau des scores.",
+    technologies: ["React", "Node.js", "Sequelize", "MySQL", "Express"],
+    imageUrl: "/projects/tournoi-app.png",
+    githubUrl: "https://github.com/vincentsi/tournoi-app",
+    demoUrl: "https://tournoi-app.vercel.app",
+  },
+  {
     title: "Portfolio",
     description: "Mon portfolio personnel créé avec Next.js et Tailwind CSS. Interface moderne et responsive avec mode sombre.",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
     imageUrl: "/projects/portfolio.png",
     githubUrl: "https://github.com/vincentsi/portfolio",
+    demoUrl: "https://vincent-simonpieri.fr",
   },
-  // Exemple de projet Python
-  {
-    title: "Analyseur de données",
-    description: "Script Python pour l'analyse de données météorologiques avec visualisation. Génération de graphiques et rapports PDF.",
-    technologies: ["Python", "Pandas", "Matplotlib"],
-    imageUrl: "/projects/python-analyzer.png",
-    githubUrl: "https://github.com/vincentsi/data-analyzer",
-  },
-  // Exemple de projet Java
   {
     title: "API REST Java",
     description: "API REST développée avec Spring Boot pour la gestion de stocks. Documentation Swagger et tests unitaires.",
     technologies: ["Java", "Spring Boot", "PostgreSQL"],
     imageUrl: "/projects/java-api.png",
     githubUrl: "https://github.com/vincentsi/java-api",
+    demoUrl: "https://api-java.vincent-simonpieri.fr/swagger-ui.html",
   },
 ];
 
