@@ -50,7 +50,7 @@ export const ProjectCard = (props: ProjectProps) => {
             rel="noopener noreferrer"
             className="inline-block mt-4 text-sm text-primary hover:underline"
           >
-            Voir la démo →
+            Voir le github →
           </Link>
         )}
       </div>

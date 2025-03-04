@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { ContactCard } from "./ContactCard";
 export const Contact  = () => {
   return (
-    <Section className="flex flex-col items-start gap-4">
+    <Section id="contact" className="flex flex-col items-start gap-4">
       <Badge variant={"outline"}>Contact me</Badge>
       <h2 className="pb-2 text-3xl front semibold tacking-tight first:mt-0">
         Je serais ravi de travailler avec vous.

@@ -1,14 +1,18 @@
-import { ReactNode } from "react";
+import { type ReactNode } from "react";
+import clsx from "clsx";
 
-interface SectionProps {
-  className?: string;
+type SectionProps = {
   children: ReactNode;
-}
+  className?: string;
+  id?: string;
+};
 
-export const Section = ({ className = "", children }: SectionProps) => {
+export const Section = ({ children, className, id }: SectionProps) => {
   return (
-    <section className="w-full flex justify-center">
-      <div className={`max-w-7xl w-full p-4 ${className}`}>{children}</div>
+    <section id={id} className={clsx("px-4 py-16 md:py-24", className)}>
+      <div className="container mx-auto">
+        {children}
+      </div>
     </section>
   );
 };
