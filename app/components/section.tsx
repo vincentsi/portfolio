@@ -6,5 +6,9 @@ interface SectionProps {
 }
 
 export const Section = ({ className = "", children }: SectionProps) => {
-  return <section className={`p-4 ${className}`}>{children}</section>;
+  return (
+    <section className="w-full flex justify-center">
+      <div className={`max-w-7xl w-full p-4 ${className}`}>{children}</div>
+    </section>
+  );
 };
