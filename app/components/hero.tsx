@@ -40,8 +40,8 @@ export const Hero = () => {
         </div>
         <div className="flex justify-start w-full max-w-xs">
           <Image
-            src="https://media.licdn.com/dms/image/v2/D4E35AQF20okmFQPYiQ/profile-framedphoto-shrink_800_800/profile-framedphoto-shrink_800_800/0/1654921462945?e=1741320000&v=beta&t=MxUBs20g10bYfBzVNDL4jdtNlUh2HMUyH_2pdLkr50Q"
-            alt="vincent picture"
+            src="/projects/vincent.png"
+            alt="Photo de Vincent Simonpieri"
             width={800}
             height={800}
             className="rounded-lg shadow-lg"
