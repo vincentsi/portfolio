@@ -1,10 +1,10 @@
-import { Section } from "./section";
-import { Card } from "../../components/ui/card";
 import { Code, LucideIcon, MessageCircle, Rss } from "lucide-react";
+import { Card } from "../../components/ui/card";
+import { ContactCard } from "./contact-card";
+import { Section } from "./section";
 import { SideProject } from "./SideProject";
-import { ContactCard } from "./ContactCard";
-import { WorkProject } from "./WorkProject";
 import type { WorkProps } from "./WorkProject";
+import { WorkProject } from "./WorkProject";
 
 export const Status = () => {
   return (

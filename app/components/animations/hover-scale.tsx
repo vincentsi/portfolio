@@ -1,14 +1,14 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, TargetAndTransition, VariantLabels } from "framer-motion";
 import { ReactNode } from "react";
 
 interface HoverScaleProps {
   children: ReactNode;
   scale?: number;
   className?: string;
-  whileHover?: any;
-  whileTap?: any;
+  whileHover?: VariantLabels | TargetAndTransition;
+  whileTap?: VariantLabels | TargetAndTransition;
 }
 
 export const HoverScale = ({

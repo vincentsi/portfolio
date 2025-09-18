@@ -13,7 +13,7 @@ import { ThemeSelector } from "./theme-selector";
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [showThemeSelector, setShowThemeSelector] = useState(false);
-  const { theme } = useTheme();
+  const {} = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,7 +25,7 @@ export const Header = () => {
   }, []);
 
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
+    const handleClickOutside = () => {
       if (showThemeSelector) {
         setShowThemeSelector(false);
       }

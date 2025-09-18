@@ -19,7 +19,7 @@ interface ThemeSelectorProps {
 export const ThemeSelector = ({ onThemeChange }: ThemeSelectorProps) => {
   const { theme, setTheme } = useTheme();
 
-  const handleThemeChange = (newTheme: any) => {
+  const handleThemeChange = (newTheme: (typeof themes)[number]["id"]) => {
     setTheme(newTheme);
     onThemeChange?.();
   };
@@ -28,7 +28,7 @@ export const ThemeSelector = ({ onThemeChange }: ThemeSelectorProps) => {
     <div className="flex flex-col gap-6">
       <div className="flex flex-col gap-4">
         <h4 className="text-sm font-medium text-muted-foreground">
-          Mode d'affichage
+          Mode d&apos;affichage
         </h4>
         <ColorSchemeToggle />
       </div>
@@ -41,7 +41,7 @@ export const ThemeSelector = ({ onThemeChange }: ThemeSelectorProps) => {
           {themes.map((themeOption) => (
             <button
               key={themeOption.id}
-              onClick={() => handleThemeChange(themeOption.id as any)}
+              onClick={() => handleThemeChange(themeOption.id)}
               className={`relative p-4 rounded-xl border-2 transition-all duration-300 hover:scale-105 ${
                 theme === themeOption.id
                   ? "border-primary shadow-lg"
