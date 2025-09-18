@@ -3,10 +3,10 @@ import { Header } from "./components/header";
 import { Hero } from "./components/hero";
 import { Spacing } from "./components/spacing";
 // import { Status } from "./components/status";
-import { Skills } from "./components/Skills";
+import { Skills } from "./components/skills";
 import { Contact } from "./components/contact";
 import { Footer } from "./components/footer";
-import { Projects } from "./components/Projects";
+import { Projects } from "./components/projects";
 
 export default function Home() {
   return (

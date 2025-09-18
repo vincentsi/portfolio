@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* Mode sombre par défaut */
+:root,
+[data-color-scheme="dark"] {
   --background: 214 44% 2%;
   --foreground: 214 38% 99%;
   --muted: 334 33% 10%;
@@ -25,9 +27,72 @@
   --radius: 0.5rem;
 }
 
-body {
-  background-color: hsl(var(--background));
-  color: hsl(var(--foreground));
+/* Mode clair */
+[data-color-scheme="light"] {
+  --background: 0 0% 100%;
+  --foreground: 214 38% 15%;
+  --muted: 334 33% 95%;
+  --muted-foreground: 334 4% 40%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 214 38% 15%;
+  --card: 0 0% 100%;
+  --card-foreground: 214 38% 15%;
+  --border: 214 14% 90%;
+  --input: 214 14% 90%;
+  --primary: 214 85% 32%;
+  --primary-foreground: 214 85% 92%;
+  --secondary: 334 85% 32%;
+  --secondary-foreground: 334 85% 92%;
+  --accent: 0 0% 70%;
+  --accent-foreground: 0 0% 0%;
+  --destructive: 10 94% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --ring: 214 85% 32%;
+}
+
+/* Thème Bleu */
+[data-theme="blue"] {
+  --primary: 199 89% 48%;
+  --primary-foreground: 199 89% 92%;
+  --secondary: 199 89% 48%;
+  --secondary-foreground: 199 89% 92%;
+  --ring: 199 89% 48%;
+}
+
+/* Thème Rouge */
+[data-theme="red"] {
+  --primary: 0 84% 60%;
+  --primary-foreground: 0 84% 92%;
+  --secondary: 0 84% 60%;
+  --secondary-foreground: 0 84% 92%;
+  --ring: 0 84% 60%;
+}
+
+/* Thème Vert */
+[data-theme="green"] {
+  --primary: 142 76% 36%;
+  --primary-foreground: 142 76% 92%;
+  --secondary: 142 76% 36%;
+  --secondary-foreground: 142 76% 92%;
+  --ring: 142 76% 36%;
+}
+
+/* Thème Orange */
+[data-theme="orange"] {
+  --primary: 25 95% 53%;
+  --primary-foreground: 25 95% 92%;
+  --secondary: 25 95% 53%;
+  --secondary-foreground: 25 95% 92%;
+  --ring: 25 95% 53%;
+}
+
+/* Thème Rose */
+[data-theme="pink"] {
+  --primary: 330 81% 60%;
+  --primary-foreground: 330 81% 92%;
+  --secondary: 330 81% 60%;
+  --secondary-foreground: 330 81% 92%;
+  --ring: 330 81% 60%;
 }
 
 @layer components {
@@ -51,19 +116,17 @@ body {
 }
 
 @layer base {
-  body {
-    background-color: hsl(var(--background));
-    color: hsl(var(--foreground));
-  }
-}
-
-
-
-@layer base {
   * {
     @apply border-border outline-ring/50;
   }
   body {
     @apply bg-background text-foreground;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Transition pour les changements de thème */
+  * {
+    transition: background-color 0.3s ease, border-color 0.3s ease,
+      color 0.3s ease;
   }
 }

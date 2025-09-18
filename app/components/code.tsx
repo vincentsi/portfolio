@@ -1,7 +1,10 @@
 import clsx from "clsx";
 import { ComponentPropsWithoutRef } from "react";
 
-export const Code = ({ className, ...props }: ComponentPropsWithoutRef<"span">) => {
+export const Code = ({
+  className,
+  ...props
+}: ComponentPropsWithoutRef<"span">) => {
   return (
     <span
       className={clsx(

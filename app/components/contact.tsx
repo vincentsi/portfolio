@@ -1,11 +1,11 @@
-import { Section } from "./section";
 import { Badge } from "@/components/ui/badge";
-import { ContactCard } from "./ContactCard";
-export const Contact  = () => {
+import { ContactCard } from "./contact-card";
+import { Section } from "./section";
+export const Contact = () => {
   return (
     <Section id="contact" className="flex flex-col items-start gap-4">
       <Badge variant={"outline"}>Contact me</Badge>
-      <h2 className="pb-2 text-3xl front semibold tacking-tight first:mt-0">
+      <h2 className="pb-2 text-4xl font-bold tracking-tight first:mt-0 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
         Je serais ravi de travailler avec vous.
       </h2>
       <div className="flex max-md:flex-col gap-4">
@@ -23,13 +23,12 @@ export const Contact  = () => {
           description="Depuis linkedin "
         />
         <ContactCard
-            url="mailto:vincent.simonpieri@gmail.com"
-            name="vincent.simonpieri@gmail.com"
-            image="e"
-            mediumImage="https://img.freepik.com/vecteurs-premium/icones-google-icones-gmail-illustration-vectorielle-modifiable_981536-461.jpg?semt=ais_hybrid"
-            description="Envoyer un mail pour me questionner ou me contacter"
-          />
-
+          url="mailto:vincent.simonpieri@gmail.com"
+          name="vincent.simonpieri@gmail.com"
+          image="e"
+          mediumImage="https://img.freepik.com/vecteurs-premium/icones-google-icones-gmail-illustration-vectorielle-modifiable_981536-461.jpg?semt=ais_hybrid"
+          description="Envoyer un mail pour me questionner ou me contacter"
+        />
       </div>
     </Section>
   );
