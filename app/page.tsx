@@ -6,7 +6,7 @@ import { Spacing } from "./components/spacing";
 import { Contact } from "./components/contact";
 import { Footer } from "./components/footer";
 import { Projects } from "./components/Projects";
-import { Skills } from "./components/skills";
+import { Skills } from "./components/Skills";
 
 export default function Home() {
   return (
