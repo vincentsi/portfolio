@@ -1,17 +1,17 @@
 "use client";
 
-import { Section } from "./section";
 import { Badge } from "@/components/ui/badge";
-import { ReactLogo } from "./icons/reactLogo";
+import { FadeIn } from "./animations/fade-in";
+import { HoverScale } from "./animations/hover-scale";
+import { StaggerChildren, StaggerItem } from "./animations/stagger-children";
 import { Code } from "./code";
-import { TailwindLogo } from "./icons/tailwindLogo";
-import { NodeLogo } from "./icons/nodeLogo";
-import { PhpLogo } from "./icons/PhpLogo";
 import { CppLogo } from "./icons/CppLogo";
 import { NextLogo } from "./icons/NextLogo";
-import { FadeIn } from "./animations/fade-in";
-import { StaggerChildren, StaggerItem } from "./animations/stagger-children";
-import { HoverScale } from "./animations/hover-scale";
+import { NodeLogo } from "./icons/nodeLogo";
+import { PhpLogo } from "./icons/PhpLogo";
+import { ReactLogo } from "./icons/reactLogo";
+import { TailwindLogo } from "./icons/tailwindLogo";
+import { Section } from "./section";
 
 export const Skills = () => {
   return (
@@ -119,6 +119,24 @@ export const Skills = () => {
             modernes et responsive
           </p>
         </div>
+
+        <StaggerItem>
+          <HoverScale scale={1.02}>
+            <div className="group flex flex-col gap-4 p-6 rounded-xl border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg">
+              <div className="flex items-center gap-4">
+                <div className="w-15 h-15 flex items-center justify-center bg-blue-600 rounded-lg group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-white font-bold text-xl">SQL</span>
+                </div>
+                <h3 className="text-2xl font-semibold tracking-tight">SQL</h3>
+              </div>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Maîtrise des bases de données relationnelles avec{" "}
+                <Code>SQL</Code>. Requêtes complexes, optimisation et gestion de
+                données
+              </p>
+            </div>
+          </HoverScale>
+        </StaggerItem>
       </StaggerChildren>
     </Section>
   );

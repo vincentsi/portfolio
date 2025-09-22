@@ -18,9 +18,9 @@ export const ProjectCard = (props: ProjectProps) => {
     <Card className="overflow-hidden group">
       {props.imageUrl && (
         <div className="relative h-48 overflow-hidden">
-          {props.githubUrl ? (
+          {props.demoUrl ? (
             <Link
-              href={props.githubUrl}
+              href={props.demoUrl}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -71,7 +71,7 @@ export const ProjectCard = (props: ProjectProps) => {
             rel="noopener noreferrer"
             className="inline-block mt-4 text-sm text-primary hover:underline"
           >
-            Voir le github →
+            Voir la démo →
           </Link>
         )}
       </div>
