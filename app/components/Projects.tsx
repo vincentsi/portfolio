@@ -35,6 +35,14 @@ const PROJECTS: ProjectProps[] = [
     demoUrl: "https://projet-site-tournoi.vercel.app/",
   },
   {
+    title: "SimplementShop",
+    description:
+      "Site e-commerce complet avec gestion de panier, système de paiement et interface d'administration. Expérience d'achat moderne et intuitive.",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Stripe"],
+    imageUrl: "/projects/simplementshop.png",
+    demoUrl: "https://simplement-shop.vercel.app/shop",
+  },
+  {
     title: "PowerPost & PowerNote",
     description:
       "Écosystème complet pour créer et organiser du contenu avec l'IA. PowerNote capture les idées, PowerPost les transforme en posts engageants. Workflow intégré pour maximiser la productivité.",
@@ -48,7 +56,6 @@ const PROJECTS: ProjectProps[] = [
       "Vercel",
     ],
     imageUrl: "/projects/power-post-note.png",
-    githubUrl: "https://github.com/vincentsi/power-post-note",
     demoUrl: "https://power-post-note.vercel.app/",
   },
   {
