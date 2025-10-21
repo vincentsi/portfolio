@@ -26,15 +26,6 @@ const Snake = dynamic(
 
 const PROJECTS: ProjectProps[] = [
   {
-    title: "Site de Tournois",
-    description:
-      "Application web complète pour la gestion de tournois. Fonctionnalités : création de tournois, inscription des équipes, suivi des matchs en temps réel, tableau des scores.",
-    technologies: ["React", "Node.js", "Sequelize", "MySQL", "Express"],
-    imageUrl: "/projects/SiteTournoi.png",
-    githubUrl: "https://github.com/vincentsi/ProjetSiteTournoi",
-    demoUrl: "https://projet-site-tournoi.vercel.app/",
-  },
-  {
     title: "SimplementShop",
     description:
       "Site e-commerce complet avec gestion de panier, système de paiement et interface d'administration. Expérience d'achat moderne et intuitive.",
@@ -56,7 +47,17 @@ const PROJECTS: ProjectProps[] = [
       "Vercel",
     ],
     imageUrl: "/projects/power-post-note.png",
+    githubUrl: "https://github.com/vincentsi/PowerPostProject",
     demoUrl: "https://power-post-note.vercel.app/",
+  },
+  {
+    title: "Site de Tournois",
+    description:
+      "Application web complète pour la gestion de tournois. Fonctionnalités : création de tournois, inscription des équipes, suivi des matchs en temps réel, tableau des scores. (Base de données actuellement INDISPONIBLE)",
+    technologies: ["React", "Node.js", "Sequelize", "MySQL", "Express"],
+    imageUrl: "/projects/SiteTournoi.png",
+    githubUrl: "https://github.com/vincentsi/ProjetSiteTournoi",
+    demoUrl: "https://projet-site-tournoi.vercel.app/",
   },
   {
     title: "Portfolio",

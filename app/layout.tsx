@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import clsx from "clsx";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -48,6 +49,7 @@ export default function RootLayout({
           <ScrollProgress />
           <ParticlesBackground />
           {children}
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
