@@ -45,6 +45,7 @@ const FEATURED_PROJECT: ProjectProps = {
     "Railway",
   ],
   imageUrl: "/projects/notepostflow.png",
+  githubUrl: "https://github.com/vincentsi/noteflow",
   demoUrl: "https://www.notepostflow.com/",
 };
 
