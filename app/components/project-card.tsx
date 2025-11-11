@@ -28,7 +28,7 @@ export const ProjectCard = (props: ProjectProps) => {
                 src={props.imageUrl}
                 alt={props.title}
                 fill
-                className="object-cover group-hover:scale-105 transition-transform duration-300 cursor-pointer"
+                className="object-contain group-hover:scale-105 transition-transform duration-300 cursor-pointer"
               />
             </Link>
           ) : (
@@ -36,7 +36,7 @@ export const ProjectCard = (props: ProjectProps) => {
               src={props.imageUrl}
               alt={props.title}
               fill
-              className="object-cover group-hover:scale-105 transition-transform duration-300"
+              className="object-contain group-hover:scale-105 transition-transform duration-300"
             />
           )}
         </div>

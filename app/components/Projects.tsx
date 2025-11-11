@@ -24,6 +24,30 @@ const Snake = dynamic(
   }
 );
 
+const FEATURED_PROJECT: ProjectProps = {
+  title: "NotePostFlow",
+  description:
+    "Plateforme tout-en-un pour créer du contenu avec l'IA. Capturez vos idées, organisez-les et transformez-les en posts engageants pour les réseaux sociaux.",
+  technologies: [
+    "Next.js",
+    "React 19",
+    "TypeScript",
+    "Tailwind CSS",
+    "Fastify",
+    "Prisma",
+    "PostgreSQL",
+    "Redis",
+    "BullMQ",
+    "OpenAI GPT-4",
+    "Stripe",
+    "Docker",
+    "Vercel",
+    "Railway",
+  ],
+  imageUrl: "/projects/notepostflow.png",
+  demoUrl: "https://www.notepostflow.com/",
+};
+
 const PROJECTS: ProjectProps[] = [
   {
     title: "SimplementShop",
@@ -77,7 +101,28 @@ export const Projects = () => {
         <div className="flex flex-col gap-4">
           <FadeIn direction="up">
             <Badge variant="outline" className="w-fit">
-              projets
+              projet en vedette
+            </Badge>
+          </FadeIn>
+          <FadeIn direction="up" delay={0.2}>
+            <h2 className="text-4xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              Mon Dernier Projet
+            </h2>
+          </FadeIn>
+          <FadeIn direction="up" delay={0.4}>
+            <p className="text-muted-foreground">
+              Découvrez mon projet le plus récent et ambitieux.
+            </p>
+          </FadeIn>
+          <div className="mt-8">
+            <ProjectCard {...FEATURED_PROJECT} />
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-4 mt-8">
+          <FadeIn direction="up">
+            <Badge variant="outline" className="w-fit">
+              autres projets
             </Badge>
           </FadeIn>
           <FadeIn direction="up" delay={0.2}>
@@ -87,8 +132,9 @@ export const Projects = () => {
           </FadeIn>
           <FadeIn direction="up" delay={0.4}>
             <p className="text-muted-foreground">
-              Découvrez mes projets personnels et professionnels. Chaque projet
-              est une opportunité d&apos;apprentissage et d&apos;innovation.
+              Découvrez mes autres projets personnels et professionnels. Chaque
+              projet est une opportunité d&apos;apprentissage et
+              d&apos;innovation.
             </p>
           </FadeIn>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
